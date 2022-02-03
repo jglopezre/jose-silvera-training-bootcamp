@@ -39,7 +39,7 @@
                 </nav>
             </div>
         </header>
-        <video src="videos/hero-video.mp4" autoplay loop></video>
+        <video src="videos/hero-video.mp4" autoplay loop playsinline></video>
         <img src="images/white-dome.png" alt="">
         
         <div id="spacer"></div>
@@ -71,32 +71,32 @@
                     <div><!--inactive dot--></div>
                     <div><!--inactive dot--></div>
                 </div>
-                <div class="col-sm-5">
+                <div class="col-lg-5">
                     <h2 class="important-subtitle">Lone Pine Dome</h2>
                     <p class="paragraph">Looking for a truly unique experience emersed in Nature? This dome is nestled in a vast open space with a perfect view of the Montana Mountains in the distance. This dome is quaint cozy and stylish providing a truly one of a kind experience! The stars above will you. The natural setting is soothing. The accomodations are cozy</p>
                     <button id="best-seller-button" class="action-button btn btn-secondary">VIEW MORE</button>
                     <!-- <a href="" class="action-button btn btn-secondary" role="button">View More</a> -->
                 </div>
-                <div class="col-sm-5 offset-sm-1">
+                <div  class="col-lg-5 offset-lg-1">
                     <!--Owl Carousel-->
-                    <div class="owl-carousel">
-                        <div id="product-card-01"class="item product-card product-card-1 ml-1 mr-1">
-                            <div id="card-cart" class="circle"><a href=""><i class="fas fa-shopping-cart"></i></a></div>
-                            <div id="price-card" class="card-tag title-box left-title-box"><h4 class="important-subtitle">100$</h4></div>
+                    <div id="products-carousel" class="products-carousel owl-carousel">
+                        <div class="item product-card product-card-1 m-1">
+                            <div class="circle"><a href=""><i class="fas fa-shopping-cart"></i></a></div>
+                            <div class="card-tag title-box left-title-box"><h4 class="important-subtitle">100$</h4></div>
                             <!-- <img src="images/best-sellers/1.png" class="card-img-top" alt=""> -->
                         </div>
-                        <div id="product-card-02" class="item product-card product-card-2 ml-1 mr-1 active">
+                        <div class="item product-card product-card-2 m-1">
                             <div class="circle"><a href=""><i class="fas fa-shopping-cart"></i></a></div>
                             <div class="card-tag title-box left-title-box"><h4 class="important-subtitle">120$</h4></div>
                             <!-- <img src="images/best-sellers/2.png" class="card-img-top" alt=""> -->
                         </div>
-                        <div id="product-card-01" class="item product-card product-card-3 m-1">
+                        <div class="item product-card product-card-3 m-1">
                             <div class="circle"><a href=""><i class="fas fa-shopping-cart"></i></a></div>
                             <div class="card-tag title-box left-title-box"><h4 class="important-subtitle">130$</h4></div>
                             <!-- <img src="images/best-sellers/3.png" class="card-img-top" alt=""> -->
                         </div>
                         
-                      </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -141,8 +141,51 @@
                     <button id="our-services-button" class="action-button btn btn-secondary">VIEW MORE</button>
                     <!-- <a href="" class="action-button btn btn-secondary">View More</a> -->
                 </div>
-                <div class="col-md-4 offset-md-1">
-
+                <div class="col-md-6 offset-md-1">
+                    <!-- OWL CAROUSEL -->
+                    <div id="services-carousel" class="services-carousel owl-carousel">
+                        <div class="item service-card">
+                            <div>
+                                <h2 class="important-subtitle">Relationship</h2>
+                                <p class="paragraph">Creating content that your guest will love to engage with is so important. Our team of experts will make sure your guests are teaming with excitement to visit your Glamp Camp</p>
+                                <div class="circle important-title">2</div>
+                            </div>
+                            <div>
+                                <img src="images/services/service-01.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="item service-card">
+                            <div>
+                                <h2 class="important-subtitle">Building</h2>
+                                <p class="paragraph">Creating content that your guest will love to engage with is so important. Our team of experts will make sure your guests are teaming with excitement to visit your Glamp Camp</p>
+                                <div class="circle important-title">2</div>
+                            </div>
+                            <div>
+                                <img src="images/services/service-02.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="item service-card">
+                            <div>
+                                <h2 class="important-subtitle">Booking</h2>
+                                <p class="paragraph">Creating content that your guest will love to engage with is so important. Our team of experts will make sure your guests are teaming with excitement to visit your Glamp Camp</p>
+                                <div class="circle important-title">2</div>
+                            </div>
+                            <div>
+                                <img src="images/services/service-03.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="item service-card">
+                            <div>
+                                <h2 class="important-subtitle">Cleaning</h2>
+                                <p class="paragraph">Creating content that your guest will love to engage with is so important. Our team of experts will make sure your guests are teaming with excitement to visit your Glamp Camp</p>
+                                <div class="circle important-title">2</div>
+                            </div>
+                            <div>
+                                <img src="images/services/service-04.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -268,9 +311,8 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script src="scripts/owl-script.js"></script>
-    <script src="scripts/home_script.js"></script>
     <script src="scripts/main_menu_script.js"></script>
+    <script src="scripts/home_script.js"></script>
 
 </body>
 </html>
