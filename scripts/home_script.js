@@ -49,6 +49,16 @@ $('.services-carousel').owlCarousel({
     
 });
 
+$('.testimonials-carousel').owlCarousel({
+    center: true,
+    items:1,
+    loop:false,
+    margin:10,
+    doots: false,
+    
+});
+
+
 let productCardsArr = Array.from(document.querySelectorAll('.product-card'));           //Products card getting
 
 const prodActiveDetection = () => { 

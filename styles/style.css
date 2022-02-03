@@ -597,6 +597,87 @@ p {
 }
 
 /*---------------------------------------------------------------------------------*/
+/*---TESTIMONIAL SECTION-------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+
+.testimonials-carousel {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.testimonial-card {
+    width: 100%;
+    height: 370px;
+    min-width: 400px;
+    min-height: 400px;
+    position: relative;
+}
+
+.testimonial-card > div:nth-child(1) {
+    position: absolute;
+    width: 75%;
+    height: 15rem;
+    right: 0;
+    bottom: 5px;
+    background-color: var(--color-01);
+    border: solid 1px var(--color-07);
+    border-radius: 60px;
+    padding: 1rem 3rem 2rem 3rem;
+    box-shadow: -5px 5px 5px var(--color-shadow);
+    z-index: 20;
+}
+
+
+
+.testimonial-card > div:nth-child(1) > p {
+    font-size: 0.8rem;;
+}
+
+.testimonial-card > div:nth-child(2) {
+    position: absolute;
+    width: 15.6rem;
+    height: 15.6rem;
+    top: 0;
+    left: 0;
+    background-color: var(--color-01);
+    border-radius: 60px;
+    overflow: hidden;
+    z-index: 30;
+}
+
+/* .testimonial-card > div:nth-child(2)::before {
+    content:'';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-shadow);
+    z-index: 25;
+} */
+.testimonial-card > div:nth-child(2) > img {
+    width: 100%;
+}
+
+.testimonial-card > div:nth-child(3) {
+    position: absolute;
+    width: 45%;
+    left: 35%;
+    border-radius: 35px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.testimonial-card > div:nth-child(3)::before {
+    display: none;
+}
+
+.testimonial-card > div:nth-child(3) > h2 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+/*---------------------------------------------------------------------------------*/
 /*---SUBSCRIBE SECTION-------------------------------------------------------------*/
 /*---------------------------------------------------------------------------------*/
 
@@ -619,6 +700,11 @@ p {
 
 #subscribe::before {
     background-image: linear-gradient( var(--color-01), var(--color-light-01) );
+}
+
+#subscribe form {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 .subscribe-text-box {
