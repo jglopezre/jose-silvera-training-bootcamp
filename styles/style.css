@@ -172,6 +172,7 @@ p {
     left: 0;
     bottom: 0;
     z-index: -10;
+    width: 100%;
 }
 
 #header > img {
@@ -334,6 +335,7 @@ p {
     transition: 0.3s;
 }
 
+
 .product-card-1 {
     background: url("../images/best-sellers/1.png") center center no-repeat;
 }
@@ -352,6 +354,9 @@ p {
     right: 2rem;
 }
 
+.card-tag:nth-child(1), .card-tag.card-tag:nth-child(2) {
+    display: none;
+}
 
 .card-tag {
     position: absolute;
