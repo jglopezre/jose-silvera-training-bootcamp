@@ -1,7 +1,48 @@
 @import "colors.css";
 
 
+.small-hero {
+    position: relative;
+    background-size: cover;
+    width: 100%;
+    height: 30%
+
+}
+
+.small-hero::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient( var(--color-shadow), var(--color-01) );
+}
+
+.title-box-alt {
+    border-radius: 50px;
+}
+
+.title-box-alt::before {
+    display: none;
+}
+
+/*---ABOUT US STYLE SECTION--*/
+.about-us-hero {
+    background: url("../images/small_hero/bg-02.jpg") 60% 20% no-repeat;
+}
+
 /*---FAQS PAGE STYLE SECTION---*/
+
+.faqs-hero {
+    background: url("../images/small_hero/bg-03.jpg") 60% 60% no-repeat;
+}
+
+section > div {
+    background-image: linear-gradient(var(--color-01), var(--color-shadow), var(--color-01));
+}
+
 .question-field {
     margin-top:2rem;
     padding: 2rem;
@@ -24,35 +65,40 @@
 
 
 /*---CONTACT US PAGE SECTION---*/
+
+.contact-us-hero {
+    background: url("../images/small_hero/bg-04.jpg") 50% 30% no-repeat;
+}
+
 #contact-us-sect {
-    background: var(--color-01) url('../images/hero.jpg') center center no-repeat;
-    background-size: cover;
+    height: 100%;
+}
+.form-field {
+    text-align: center;
+    height: 80%;
+}
+
+/* #contact-us-sect {
+    
     height: 100%;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-}
+} */
 
-#contact-us-sect::before {
-    content: '';
-    display: block;
-    position: absolute;
-    background-image: linear-gradient( var(--color-light-01), var(--color-01) );
-    width: 100%;
-    height: 100%;
-    bottom: 0;
-    left: 0;
 
-}
 
-#contact-us-cover {
-    width: 100%;
-}
 
-#contact-us-cover form{
+
+/* #contact-us-cover form{
     width: 100%;
     margin-top: 3rem;
     margin-bottom: 3rem;
+} */
+
+/*---SHOP STYLE SECTION---*/
+.shop-hero {
+    background: url("../images/small_hero/bg-01.jpg") 60% 60% no-repeat;
 }

@@ -18,14 +18,14 @@
         <a href="faqs.html">FAQ's</a>
         <a href="contact_us.html">Contact Us</a>
     </div>
-    <header class="container-fluid sticky-top">
+    <header class="container-fluid fixed-top">
         <div class="row">
-            <div class="top-bar col-12 justify-content-center " >
-                <a href="">Get Yor Free Catalog</a>
+            <div id="top-bar" class="top-bar col-12 justify-content-center " >
+                <a id="top-bar-text" href="">Get Yor Free Catalog</a>
             </div>
         </div>
         <div class="row">
-            <nav class="main-navbar navbar navbar-light col-12 "> 
+            <nav id="bottom-bar" class="main-navbar navbar navbar-light col-12 "> 
                 <a href="" class="navbar-brand"><img src="images/logo.png" alt="Global Glamping" width="72"></a>
                 <button id="menu-button" class="blue-button btn btn-primary">
                     <i class="fas fa-search"></i>
@@ -35,6 +35,8 @@
             </nav>
         </div>
     </header>
+
+    <div class="small-hero about-us-hero" ></div>
 
     <section id="about-us" class="translucent-image">
         <img src="images/black-dome.png" alt="">
@@ -54,7 +56,7 @@
                 </div>
                 <div class="about-us-desc col-md-5 offset-md-1">
                     <p class="paragraph"> Global Glamping is a full stack glamping company  founded in 2020. from concept to glamcamp we parthner with you to accelerate the progress of yopur investment and ensure a flauless launch. If you have an existing glamcamp we support your vision by designin and implementing a custom expansion plan. All of this is acomplished trhough our propietary business blueprint  carried  by highly trained and experienced professionals.</p>
-                    <a href="/" class="action-button btn btn-secondary float-right">Home</a>
+                    <button id="home-button" class="action-button btn btn-secondary">HOME</button>
                 </div>
             </div>
         </div>
@@ -125,6 +127,7 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
-    <script src="scripts/main_script.js"></script>
+    <script src="scripts/main_menu_script.js"></script>
+    <script src="scripts/about_us_script.js"></script>
 </body>
 </html>
