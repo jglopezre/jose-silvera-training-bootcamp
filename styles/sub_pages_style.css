@@ -1,0 +1,58 @@
+@import "colors.css";
+
+
+/*---FAQS PAGE STYLE SECTION---*/
+.question-field {
+    margin-top:2rem;
+    padding: 2rem;
+    border-radius: 50px;
+    background-color: var(--color-01);
+    
+}    
+
+.question-field > h1 {
+    color: var(--color-04);
+    font-size: 1.3rem;
+}
+
+.question-field > p {
+    color: var(--color-05);
+    font: 1.2rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+
+/*---CONTACT US PAGE SECTION---*/
+#contact-us-sect {
+    background: var(--color-01) url('../images/hero.jpg') center center no-repeat;
+    background-size: cover;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#contact-us-sect::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: linear-gradient( var(--color-light-01), var(--color-01) );
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+
+}
+
+#contact-us-cover {
+    width: 100%;
+}
+
+#contact-us-cover form{
+    width: 100%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}

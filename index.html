@@ -9,10 +9,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
 
 </head>
 <body>
+    <div id="side-menu">
+        <a href="javascript:void(0)" id="close-button">&times;</a>
+        <a href="about_us.html">About Us</a>
+        <a href="shop_by_c.html">Shop by Category</a>
+        <a href="faqs.html">FAQ's</a>
+        <a href="contact_us.html">Contact Us</a>
+    </div>
+
     <section id="header">
         <header class="container-fluid">
             <div class="row">
@@ -21,19 +29,29 @@
                 </div>
             </div>
             <div class="row">
-                <nav class="main-navbar navbar navbar-light col-12"> 
-                    <a href="" class="navbar-brand"><img src="images/logo.png" alt="Global Glamping" width="96"></a>
-                    <a href="" class="btn btn-primary float-right" role="button">Button</a>
+                <nav class="main-navbar navbar navbar-light col-12 sticky-top"> 
+                    <a href="" class="navbar-brand"><img src="images/logo.png" alt="Global Glamping" width="72"></a>
+                    <button id="menu-button" class="blue-button btn btn-primary">
+                        <i class="fas fa-search"></i>
+                        <i class="fas fa-shopping-cart"></i>
+                        <i class="fas fa-bars"></i>
+                    </button>
                 </nav>
             </div>
-            <div class="hero-caption row">
-                <div class="header-caption col-6">
+        </header>
+        <video src="videos/hero-video.mp4" autoplay loop width="auto"></video>
+        <img src="images/white-dome.png" alt="">
+        
+        <div id="hero" class="hero-caption">
+            <div class="container-fluid">
+                <div class="header-caption col-6 ">
                     <h1>Global Glamping</h1>
                     <h2>Explore your world</h2>
                     <a href="" class="action-button btn btn-secondary" role="button">GET NOW</a>
                 </div>
             </div>
-        </header>
+        </div>
+        
     </section>
     
     <section id="best-sellers">
@@ -63,7 +81,7 @@
                             <div class="card-tag title-box left-title-box"><h4 class="important-subtitle">100$</h4></div>
                             <!-- <img src="images/best-sellers/1.png" class="card-img-top" alt=""> -->
                         </div>
-                        <div class="product-card product-card-2 ml-1 mr-1">
+                        <div class="product-card product-card-2 ml-1 mr-1 active">
                             <div class="circle"><a href=""><i class="fas fa-shopping-cart"></i></a></div>
                             <div class="card-tag title-box left-title-box"><h4 class="important-subtitle">120$</h4></div>
                             <!-- <img src="images/best-sellers/2.png" class="card-img-top" alt=""> -->
@@ -80,7 +98,7 @@
         </div>
     </section>
 
-    <section id="about-us">
+    <section id="about-us" class="translucent-image">
         <img src="images/black-dome.png" alt="">
         <div class="container-fluid">
             <div class="row">
@@ -89,14 +107,16 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-4 offset-sm-1">
-                    <div id="what-we-do">
-
+                <div class="col-md-5">
+                    <div class="what-we-do">
+                        <div><!--Blue Rectangles overlaped--></div>
+                        <div><img src="images/about.jpg" alt="A man laying on a wall"></div>
+                        <div>What We Do</div>
                     </div>
                 </div>
-                <div class="col-sm-5 offset-sm-1">
+                <div class="about-us-desc col-md-5 offset-md-1">
                     <p class="paragraph"> Global Glamping is a full stack glamping company  founded in 2020. from concept to glamcamp we parthner with you to accelerate the progress of yopur investment and ensure a flauless launch. If you have an existing glamcamp we support your vision by designin and implementing a custom expansion plan. All of this is acomplished trhough our propietary business blueprint  carried  by highly trained and experienced professionals.</p>
-                    <a href="" class="action-button btn btn-secondary float-right">View More</a>
+                    <a href="about_us.html" class="action-button btn btn-secondary float-right">View More</a>
                 </div>
             </div>
         </div>
@@ -122,7 +142,8 @@
         </div>
     </section>
 
-    <section id="partners">
+    <section id="partners" class="translucent-image">
+        <img src="images/black-dome.png" alt="">
         <div class="container-fluid">
             <div class="row">
                 <div class="title-box right-title-box col-md-4 offset-md-8">
@@ -152,7 +173,8 @@
         </div>
     </section>
 
-    <section id="subscribe" class="section-box">
+    <section id="subscribe" class="translucent-image section-box">
+        <img src="images/black-dome.png" alt="">
         <div class="container-fluid">
             <div class="row">
                 <div class="subscribe-text-box title-box col-lg-10 offset-lg-1">
@@ -208,19 +230,19 @@
                     <table>
                         <tr>
                             <td><div class="blue-dots"></div></td>
-                            <td><a href="">About Us</a></td>
+                            <td><a href="about_us.html">About Us</a></td>
                         </tr>
                         <tr>
                             <td><div class="blue-dots"></div></td>
-                            <td><a href="">Shop By Category</a></td>
+                            <td><a href="shop_by_c.html">Shop By Category</a></td>
                         </tr>
                         <tr>
                             <td><div class="blue-dots"></div></td>
-                            <td><a href="">Services</a></td>
+                            <td><a href="#services">Services</a></td>
                         </tr>
                         <tr>
                             <td><div class="blue-dots"></div></td>
-                            <td><a href="">Contact Us</a></td>
+                            <td><a href="contact_us.html">Contact Us</a></td>
                         </tr>
                     </table>
                 </div>
@@ -239,7 +261,8 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script src="main_script.js"></script>
+    <script src="scripts/owl-script.js"></script>
+    <script src="scripts/main_script.js"></script>
 
 </body>
 </html>
