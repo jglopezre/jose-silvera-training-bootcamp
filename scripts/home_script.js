@@ -80,9 +80,10 @@ productsCarousel.on('translated.owl.carousel', prodActiveDetection);
 /*---------------------------------------------------------------------------------*/
 /*---SERVICE CAROUSEL SECTION------------------------------------------------------*/
 /*---------------------------------------------------------------------------------*/
+let indicatorDotsArr = Array.from(document.querySelectorAll('.indicator-dot'));
 
 
-$('.services-carousel').owlCarousel({
+let serviceCarousel = $('.services-carousel').owlCarousel({
     center: true,
     items:1,
     loop:false,
@@ -90,6 +91,21 @@ $('.services-carousel').owlCarousel({
     doots: false,
     
 });
+
+
+
+serviceCarousel.on('changed.owl.carousel', function(event) {
+    let spot = event.item.index;
+
+    for(let i = 0; i < indicatorDotsArr.length; i ++) {
+        indicatorDotsArr[i].style.backgroundColor = 'var(--color-05)';
+    }
+
+    indicatorDotsArr[spot].style.backgroundColor = 'var(--color-04)';
+
+    
+});
+
 
 /*---------------------------------------------------------------------------------*/
 /*---TESTIMONIAL SECTION-------------------------------------------------------------*/
