@@ -1,8 +1,17 @@
+/*---------------------------------------------------------------------------------*/
+/*---ACTIONS BUTTON SECTION--------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+
 
 document.getElementById('hero-button').addEventListener('click', () => location.href = "shop_by_c.html");
 document.getElementById('best-seller-button').addEventListener('click', () => location.href = "shop_by_c.html");
 document.getElementById('about-us-button').addEventListener('click', () => location.href = "about_us.html");
 document.getElementById('our-services-button').addEventListener('click', () => location.href = "shop_by_c.html");
+
+
+/*---------------------------------------------------------------------------------*/
+/*---SIDE MENU SECTION-------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
 
 
 let headerTopBarText = document.getElementById('top-bar-text');
@@ -25,12 +34,17 @@ window.onscroll = function() {
     }
 }
 
+/*---------------------------------------------------------------------------------*/
+/*---PRODUCTS CAROUSEL SECTION-----------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
 
-var productsCarousel = $('.products-carousel').owlCarousel({
+
+
+let productsCarousel = $('.products-carousel').owlCarousel({
     center: true,
     items: 2,
     margin: -50,
-    loop: true,
+    loop: false,
     dots: false,
     responsive:{
         400: {
@@ -42,25 +56,6 @@ var productsCarousel = $('.products-carousel').owlCarousel({
         
     }
 }) 
-
-$('.services-carousel').owlCarousel({
-    center: true,
-    items:1,
-    loop:false,
-    margin:10,
-    doots: false,
-    
-});
-
-$('.testimonials-carousel').owlCarousel({
-    center: true,
-    items:1,
-    loop:false,
-    margin:10,
-    doots: false,
-    
-});
-
 
 let productCardsArr = Array.from(document.querySelectorAll('.product-card'));           //Products card getting
 
@@ -78,8 +73,50 @@ const prodActiveDetection = () => {
     })
 }
 
+prodActiveDetection(productCardsArr);                                                  //Make a call function on first page load
 
-prodActiveDetection(productCardsArr);
 productsCarousel.on('translated.owl.carousel', prodActiveDetection);
+
+/*---------------------------------------------------------------------------------*/
+/*---SERVICE CAROUSEL SECTION------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+
+
+$('.services-carousel').owlCarousel({
+    center: true,
+    items:1,
+    loop:false,
+    margin:10,
+    doots: false,
+    
+});
+
+/*---------------------------------------------------------------------------------*/
+/*---TESTIMONIAL SECTION-------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+
+/* const testimonialNextButton = document.getElementById('testimonial-button') */
+const testimonialIndicator = document.getElementById('testimonial-indicator');
+
+
+let testimonialCarousel = $('.testimonials-carousel').owlCarousel({
+    center: true,
+    items:1,
+    loop:false,
+    margin: 10,
+    doots: false,
+});
+
+$('.testimonial-button').click(function() {
+    console.log('button pressed');
+    testimonialCarousel.trigger('next.owl.carousel');
+});
+
+testimonialCarousel.on('initialized.owl.carousel changed.owl.carousel', function(event) {
+    let itemCount = event.item.count;
+    let spot = event.item.index;
+
+    testimonialIndicator.firstElementChild.innerText = (spot + 1) + "/" + itemCount;
+});
 
 
