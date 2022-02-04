@@ -1,4 +1,4 @@
-document.getElementById('home-button').addEventListener('click', () => location.href = "/");
+document.getElementById('home-button').addEventListener('click', () => location.href = "/index.html");
 
 let headerTopBarText = document.getElementById('top-bar-text');
 let headerTopBar = document.getElementById('top-bar');
