@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ's-Bootcamp-Test</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/sub_pages_style.css">
 </head>
+
 <body>
     <div id="side-menu">
         <a href="javascript:void(0)" id="close-button">&times;</a>
@@ -20,13 +23,13 @@
     </div>
     <header class="container-fluid fixed-top">
         <div class="row">
-            <div id="top-bar" class="top-bar col-12 justify-content-center " >
+            <div id="top-bar" class="top-bar col-12 justify-content-center ">
                 <a id="top-bar-text" href="">Get Yor Free Catalog</a>
             </div>
         </div>
         <div class="row">
-            <nav id="bottom-bar" class="main-navbar navbar navbar-light col-12 "> 
-                <a href="" class="navbar-brand"><img src="images/logo.png" alt="Global Glamping" width="72"></a>
+            <nav id="bottom-bar" class="main-navbar navbar navbar-light col-12 ">
+                <a href="/" class="navbar-brand"><img src="images/logo.png" alt="Global Glamping" width="72"></a>
                 <button id="menu-button" class="blue-button btn btn-primary">
                     <i class="fas fa-search"></i>
                     <i class="fas fa-shopping-cart"></i>
@@ -36,7 +39,7 @@
         </div>
     </header>
 
-    <div class="small-hero faqs-hero" ></div>
+    <div class="small-hero faqs-hero"></div>
 
     <section id="faqs-section">
         <div class="container-fluid">
@@ -46,7 +49,100 @@
                 </div>
             </div>
             <div class="row">
-                <div class="question-field col-md-10 offset-md-1">
+                <div class="col-md-10 offset-md-1 mt-3 mb-3">
+                    <div id="accordion">
+
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                                        aria-expanded="true" aria-controls="collapseOne">
+                                        <h1>> How can I pay services?</h1>
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                data-parent="#accordion">
+                                <div class="card-body">
+                                    <p>You can pay services using Visa, Master Card, American Express or Dinners Club credit Card</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse"
+                                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <h1>> Which materials are used for building domes?</h1>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                data-parent="#accordion">
+                                <div class="card-body">
+                                    <p>Domes are builded with pine wood and best quality fabric, taht can resist strong sun and rains</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header" id="headingThree">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse"
+                                        data-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        <h1>> You are working on weekends?</h1>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                data-parent="#accordion">
+                                <div class="card-body">
+                                    <p>Yes, we are. On weekends, we only take new bookings and repairing cases too.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header" id="headingFour">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour"
+                                        aria-expanded="false" aria-controls="collapseFour">
+                                        <h1>> How I can do for canceling a Service?</h1>
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                                data-parent="#accordion">
+                                <div class="card-body">
+                                    <p>You can send us a mail with your request, or contact us by a phone call</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header" id="headingFive">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive"
+                                        aria-expanded="false" aria-controls="collapseFive">
+                                        <h1>> How many time take a dome building process?</h1>
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
+                                data-parent="#accordion">
+                                <div class="card-body">
+                                    <p>A dome can be builded in one week, we can build more than a dome simultaneously</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="question-field col-md-10 offset-md-1">
                     <h1>> How can I pay services?</h1>
                     <p>You can pay services using Visa, Master Card, American Express or Dinners Club credit Card</p>
                 </div>
@@ -69,8 +165,8 @@
                 <div class="question-field col-md-10 offset-md-1">
                     <h1>> How many time take a dome building process?</h1>
                     <p>A dome can be builded in one week, we can build more than a dome simultaneously</p>
-                </div>
-                
+                </div> -->
+
             </div>
         </div>
     </section>
@@ -83,15 +179,21 @@
                     <table>
                         <tr>
                             <td><i class="fas fa-map-marker-alt"></i></td>
-                            <td><p>5191 Eastside Hwy Stevensville, MT 59870</p></td>
+                            <td>
+                                <p>5191 Eastside Hwy Stevensville, MT 59870</p>
+                            </td>
                         </tr>
                         <tr>
                             <td><i class="fas fa-envelope"></i></td>
-                            <td><p>info@glamping.global</p></td>
+                            <td>
+                                <p>info@glamping.global</p>
+                            </td>
                         </tr>
                         <tr>
                             <td><i class="fas fa-phone-alt"></i></td>
-                            <td><p>Tel: 1-844-WEGLAMP</p></td>
+                            <td>
+                                <p>Tel: 1-844-WEGLAMP</p>
+                            </td>
                         </tr>
                     </table>
                 </div>
@@ -99,29 +201,40 @@
                     <div>
                         <img src="images/logo.png" alt="" width="160">
                     </div>
-                    <div>    
-                        <div class="circle"><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></div>
-                        <div class="circle"><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></div>
-                        <div class="circle"><a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a></div>
-                    </div>    
+                    <div>
+                        <div class="circle"><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                        <div class="circle"><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                        </div>
+                        <div class="circle"><a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
                 </div>
                 <div class="quick-links">
                     <h2 class="important-subtitle">Quick Links</h2>
                     <table>
                         <tr>
-                            <td><div class="blue-dots"></div></td>
+                            <td>
+                                <div class="blue-dots"></div>
+                            </td>
                             <td><a href="about_us.html">About Us</a></td>
                         </tr>
                         <tr>
-                            <td><div class="blue-dots"></div></td>
+                            <td>
+                                <div class="blue-dots"></div>
+                            </td>
                             <td><a href="shop_by_c.html">Shop By Category</a></td>
                         </tr>
                         <tr>
-                            <td><div class="blue-dots"></div></td>
+                            <td>
+                                <div class="blue-dots"></div>
+                            </td>
                             <td><a href="/">Services</a></td>
                         </tr>
                         <tr>
-                            <td><div class="blue-dots"></div></td>
+                            <td>
+                                <div class="blue-dots"></div>
+                            </td>
                             <td><a href="contact_us.html">Contact Us</a></td>
                         </tr>
                     </table>
@@ -135,12 +248,19 @@
             </div>
         </div>
     </footer>
-    
 
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+        crossorigin="anonymous"></script>
     <script src="scripts/main_menu_script.js"></script>
     <script src="scripts/faqs_script.js"></script>
 </body>
+
 </html>

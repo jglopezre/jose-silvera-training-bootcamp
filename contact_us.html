@@ -27,7 +27,7 @@
         </div>
         <div class="row">
             <nav id="bottom-bar" class="main-navbar navbar navbar-light col-12 "> 
-                <a href="" class="navbar-brand"><img src="images/logo.png" alt="Global Glamping" width="72"></a>
+                <a href="/" class="navbar-brand"><img src="images/logo.png" alt="Global Glamping" width="72"></a>
                 <button id="menu-button" class="blue-button btn btn-primary">
                     <i class="fas fa-search"></i>
                     <i class="fas fa-shopping-cart"></i>
@@ -38,30 +38,69 @@
 
     <div class="small-hero contact-us-hero" ></div>
 
-    <section id="contact-us-sect">
-            <div class="container-fluid h-100">
-                <div class="row">
-                    <div class="title-box title-box-alt col-md-10 offset-md-1">
-                        <h1 class="important-title">Contact Us</h1>
+    <section id="contact-us" class="translucent-image" >
+        <img src="images/black-dome.png" alt="">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 offset-md-1 d-flex justify-content-center align-item-center">
+                    <div class="info-container d-flex justify-content-center flex-column">
+                        <div class="social-buttons d-flex justify-content-around">    
+                            <div class="circle"><a href=""><i class="fab fa-facebook-f"></i></a></div>
+                            <div class="circle"><a href=""><i class="fab fa-instagram"></i></a></div>
+                            <div class="circle"><a href=""><i class="fab fa-linkedin-in"></i></a></div>
+                        </div>
+
+                        <h2 class="important-subtitle">More Information</h2>
+                        <table>
+                            <tr>
+                                <td><i class="fas fa-map-marker-alt"></i></td>
+                                <td><p>5191 Eastside Hwy Stevensville, MT 59870</p></td>
+                            </tr>
+                            <tr>
+                                <td><i class="fas fa-envelope"></i></td>
+                                <td><p>info@glamping.global</p></td>
+                            </tr>
+                            <tr>
+                                <td><i class="fas fa-phone-alt"></i></td>
+                                <td><p>Tel: 1-844-WEGLAMP</p></td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
-                <div class="form-field col-sm-6 offset-sm-3 d-flex justify-content-center flex-column h-75">
-                    <p>Plese, send us your email and we will contact you soon.</p>
-                    <form class="form-inline">
-                        <!-- <div class="form-group">
-                            <label for="" class="sr-only">Name</label>
-                            <input type="text" class="form-control form-control-lg" placeholder="Jon Doe">
-                        </div> -->
-                        <div class="form-group">
-                            <label for="" class="sr-only">Email</label>
-                            <input type="text" class="form-control form-control-lg" placeholder="jon_doe@myemail.com">
-                        </div>
-                        <button type="submit" class="action-button btn btn-secondary btn-lg" >Send</button>
-                    </form>
+                <div class="col-md-4 offset-md-2 p-4">
+                    <div class="form-container">
+                        <form action="">
+                            <div class="form-group">
+                                <label for="fname">First Name</label>
+                                <input type="text" class="form-control" id="fname" placeholder="Jane">
+                            </div>
+                            <div class="form-group">
+                                <label for="lname">Last Name</label>
+                                <input type="text" class="form-control" id="lname" placeholder="Doe">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-mail</label>
+                                <input type="email" class="form-control" id="email" placeholder="Doe">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Subject</label>
+                                <input type="text" class="form-control" id="subject" placeholder="I need information">
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="more-info-check">
+                                <label for="more-info-check" class="form-check-label">I wanna receive news</label>
+                            </div>
+                            <div class="form-group">
+                                <label for="email-body">Messaje</label>
+                                <textarea class="form-control" id="email-body" rows="3"></textarea>
+                            </div>
+                            
+                        </form>
+                    </div>
                 </div>
             </div>
+        </div>
     </section>
-
 
     <footer>
         <div class="container-fluid">

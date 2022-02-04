@@ -1,7 +1,7 @@
 let headerTopBarText = document.getElementById('top-bar-text');
 let headerTopBar = document.getElementById('top-bar');
 let headerBotoomBar = document.getElementById('bottom-bar');
-let changingSection = document.getElementById('contact-us-sect')
+let changingSection = document.getElementById('contact-us')
 
 window.onscroll = function() {
     if(window.pageYOffset >= changingSection.offsetTop) {

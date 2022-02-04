@@ -28,13 +28,16 @@ window.onscroll = function() {
 
 var productsCarousel = $('.products-carousel').owlCarousel({
     center: true,
-    items: 1,
-    margin: -100,
-    loop: false,
+    items: 2,
+    margin: -50,
+    loop: true,
     dots: false,
     responsive:{
-        600:{
+        400: {
             items:1
+        },
+        700:{
+            items:2
         },
         
     }
@@ -63,7 +66,7 @@ let productCardsArr = Array.from(document.querySelectorAll('.product-card'));   
 
 const prodActiveDetection = () => { 
     productCardsArr.forEach((d) => {
-        if( d.offsetParent.className.indexOf('active') >= 0 ) {
+        if( d.offsetParent.className.indexOf('center') >= 0 ) {
             d.style.transform = 'scale(1.2)';
             d.firstElementChild.style.display = "block";
             d.lastElementChild.style.display = "block" ;
@@ -77,6 +80,6 @@ const prodActiveDetection = () => {
 
 
 prodActiveDetection(productCardsArr);
-productsCarousel.on('dragged.owl.carousel', prodActiveDetection);
+productsCarousel.on('translated.owl.carousel', prodActiveDetection);
 
 
