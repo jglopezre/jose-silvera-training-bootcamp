@@ -767,15 +767,14 @@ p {
 }
 
 .testimonial-card {
-    width: 100%;
+    width: 780px;
     height: 370px;
-    min-width: 790px;
     position: relative;
 }
 
 .testimonial-card > div:nth-child(1) {
     position: absolute;
-    width: 75%;
+    width: 72%;
     height: 15rem;
     right: 0;
     bottom: 5px;
@@ -846,12 +845,15 @@ p {
     box-shadow: none;
 }
 
+#testimonial-indicator {
+    transform: rotate(-90deg);
+}
+
 #testimonial-indicator > h2 {
     padding: 0;
     margin: 0;
     font-size: 1.8rem;
     color: var(--color-04);
-    transform: rotate(-90deg);
 }
 
 /*---------------------------------------------------------------------------------*/
@@ -993,23 +995,33 @@ footer {
 /*---MEDIA QUERY SECTION-----------------------------------------------------------*/
 /*---------------------------------------------------------------------------------*/
 
-/* @media only screen and (max-width: 799px) {
-    #hero-section > video {
-        height: 100%;
+@media only screen and (max-width: 500px) {
+    .testimonial-card {
+        width: 330px;
+        height: 600px;
     }
-
-}
-
-@media only screen and (min-width: 800px) {
-    #hero-section > video {
+    .testimonial-card > div:nth-child(1){
         width: 100%;
+        height: 60%;
     }
-} */
+    .testimonial-card > div:nth-child(3)  {
+        display: none;
+    }
+}
 
 @media only screen and (max-width: 960px) {
     .testimonial-button {
         transform: rotate(0deg);
     }
+    
+    .testimonial-indicator > h2, .indicator-bar, .dots, .what-we-do > div:nth-child(3) {
+        display: none;
+    }
+
+    .testimonial-indicator {
+        transform: rotate(0deg);
+    }
+
 }
 
 @keyframes beat {

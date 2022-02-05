@@ -16,21 +16,24 @@ document.getElementById('our-services-button').addEventListener('click', () => l
 
 let headerTopBarText = document.getElementById('top-bar-text');
 let headerTopBar = document.getElementById('top-bar');
-let headerBotoomBar = document.getElementById('bottom-bar');
+let headerBottomBar = document.getElementById('bottom-bar');
 let changingSection = document.getElementById('best-sellers')
 
 window.onscroll = function() {
     if(window.pageYOffset >= changingSection.offsetTop) {
         headerTopBar.style.backgroundColor = "var(--color-01)";
         headerTopBarText.style.color = "var(--color-04)"
-        headerBotoomBar.style.backgroundColor = 'var(--color-04)';
+        headerBottomBar.style.backgroundColor = 'var(--color-04)';
         menuButton.style.border = 'solid 1px var(--color-01)';
+        headerBottomBar.style.boxShadow = '0 5px 5px var(--color-shadow)';
         
     } else {
         headerTopBar.style.backgroundColor = "var(--color-light-03)";
         headerTopBarText.style.color = "var(--color-01)";
-        headerBotoomBar.style.backgroundColor = 'transparent';
+        headerBottomBar.style.backgroundColor = 'transparent';
         menuButton.style.border = 'none';
+        headerBottomBar.style.boxShadow = 'none';
+        
     }
 }
 
@@ -42,11 +45,12 @@ window.onscroll = function() {
 
 let productsCarousel = $('.products-carousel').owlCarousel({
     center: true,
+    autoWidth: true,
     items: 2,
-    margin: -50,
-    loop: false,
+    margin: 50,
+    loop: true,
     dots: false,
-    responsive:{
+    /* responsive:{
         400: {
             items:1
         },
@@ -54,7 +58,7 @@ let productsCarousel = $('.products-carousel').owlCarousel({
             items:2
         },
         
-    }
+    } */
 }) 
 
 let productCardsArr = Array.from(document.querySelectorAll('.product-card'));           //Products card getting
@@ -77,17 +81,20 @@ prodActiveDetection(productCardsArr);                                           
 
 productsCarousel.on('translated.owl.carousel', prodActiveDetection);
 
+
+
+
 /*---------------------------------------------------------------------------------*/
 /*---SERVICE CAROUSEL SECTION------------------------------------------------------*/
 /*---------------------------------------------------------------------------------*/
 let indicatorDotsArr = Array.from(document.querySelectorAll('.indicator-dot'));
 
-
 let serviceCarousel = $('.services-carousel').owlCarousel({
     center: true,
+    autoWidth: true,
     items:1,
-    loop:false,
-    margin:10,
+    loop: true,
+    margin: 50,
     doots: false,
     
 });
@@ -95,7 +102,7 @@ let serviceCarousel = $('.services-carousel').owlCarousel({
 
 
 serviceCarousel.on('changed.owl.carousel', function(event) {
-    let spot = event.item.index;
+    let spot = event.page.index;
 
     for(let i = 0; i < indicatorDotsArr.length; i ++) {
         indicatorDotsArr[i].style.backgroundColor = 'var(--color-05)';
@@ -117,9 +124,10 @@ const testimonialIndicator = document.getElementById('testimonial-indicator');
 
 let testimonialCarousel = $('.testimonials-carousel').owlCarousel({
     center: true,
+    autoWidth: true,
     items:1,
-    loop:false,
-    margin: 10,
+    loop: true,
+    margin: 50,
     doots: false,
 });
 
@@ -129,8 +137,8 @@ $('.testimonial-button').click(function() {
 });
 
 testimonialCarousel.on('initialized.owl.carousel changed.owl.carousel', function(event) {
-    let itemCount = event.item.count;
-    let spot = event.item.index;
+    let itemCount = event.page.count;
+    let spot = event.page.index;
 
     testimonialIndicator.firstElementChild.innerText = (spot + 1) + "/" + itemCount;
 });
