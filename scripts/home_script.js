@@ -47,18 +47,9 @@ let productsCarousel = $('.products-carousel').owlCarousel({
     center: true,
     autoWidth: true,
     items: 2,
-    margin: 150,
+    margin: 100,
     loop: true,
-    dots: false,
-    /* responsive:{
-        400: {
-            items:1
-        },
-        700:{
-            items:2
-        },
-        
-    } */
+    dots: false,   
 }) 
 
 let productCardsArr = Array.from(document.querySelectorAll('.product-card'));           //Products card getting
@@ -80,9 +71,6 @@ const prodActiveDetection = () => {
 prodActiveDetection(productCardsArr);                                                  //Make a call function on first page load
 
 productsCarousel.on('translated.owl.carousel', prodActiveDetection);
-
-
-
 
 /*---------------------------------------------------------------------------------*/
 /*---SERVICE CAROUSEL SECTION------------------------------------------------------*/
@@ -118,9 +106,7 @@ serviceCarousel.on('changed.owl.carousel', function(event) {
 /*---TESTIMONIAL SECTION-------------------------------------------------------------*/
 /*---------------------------------------------------------------------------------*/
 
-/* const testimonialNextButton = document.getElementById('testimonial-button') */
 const testimonialIndicator = document.getElementById('testimonial-indicator');
-
 
 let testimonialCarousel = $('.testimonials-carousel').owlCarousel({
     center: true,
