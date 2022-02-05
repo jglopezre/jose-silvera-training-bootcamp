@@ -132,6 +132,7 @@ p {
 
 .blue-button {
     background-color: var(--color-04);
+    color: var(--color-01);
     border: none;
     border-radius: 30px;
     padding: 0.5rem 2.5rem;
@@ -141,7 +142,7 @@ p {
 /*----HEADER SECTION---------------------------------------------------------------*/
 /*---------------------------------------------------------------------------------*/
 
-#header {
+#hero-section {
     width: 100%;
     height: 100%;
     background-color: transparent;
@@ -149,15 +150,37 @@ p {
     position: relative;
     overflow: hidden;
 }
-#header > video {
+
+#hero > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#hero-section > div > video {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+/* #hero-section > video {
     position: absolute;
     left: 0;
     bottom: 0;
     z-index: -10;
     
-}
+} */
 
-#header > img {
+#hero-section > img {
     position: absolute;
     opacity: 0.2;
     right: -150px;
@@ -175,6 +198,7 @@ p {
 .top-bar > a {
     font-weight: bold;
     color: var(--color-01);
+    text-shadow: -1px 1px var(--color-shadow);
     text-decoration: none;
     transition: color 0.2s;
 }
@@ -189,7 +213,7 @@ p {
 
 .main-navbar {
     background-color: transparent;
-    padding: 0 2rem;
+    padding: 0 5%;
     transition: background-color 0.2s;
 }
 
@@ -197,11 +221,22 @@ p {
     height: 100%;
 }
 
-#hero > div {
+#hero > div:nth-child(1) {
+    height: 75%;
+}
+
+#hero > div:nth-child(2) {
+    height: 25%;
+}
+
+#hero > div:nth-child(2) > div:nth-child(1) {
+    padding-right: 5%;
+}
+/* #hero > div {
     height: inherit;
     display: flex;
     align-items: center;
-}
+} */
 
 .hero-caption::before {
     content: '';
@@ -217,16 +252,18 @@ p {
 .header-caption {
     padding: 1rem 2rem 4rem 2rem;
     position: relative;
+    text-shadow: -2px 2px var(--color-shadow);
 }
 
-.header-caption::before {
+/* .header-caption::before {
     content: '';
     display: block;
     position: absolute;
-}
+} */
 
 .header-caption > h1, .header-caption > h2 {
     color: var(--color-01);
+    margin-bottom: 1.5rem;
 }
 
 .header-caption > h2 {
@@ -234,9 +271,9 @@ p {
     
 }
 
-.header-caption > a {
+/* .header-caption > a {
     margin-top: 1.5rem;
-}
+} */
 
 #spacer {
     height: 5rem;
@@ -276,34 +313,43 @@ p {
 #side-menu #close-button {
     font-size: 2.2rem;
 }
-
-/*---------------------------------------------------------------------------------*/
-/*---SOCIAL ANIMATED BUTTON SECTION------------------------------------------------*/
-/*---------------------------------------------------------------------------------*/
-
-.artboard {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: row;
-	flex-wrap: wrap;
-	position: absolute;
-    right: 12%;
-	top: 40%;
-    border-radius: 40px;
+#menu-button {
+    width: 180px;
+    padding: 0.5rem 2rem;
+    margin-left: 10%;
 }
-.button {
-	width: 200px;
-	height: 60px;
+#menu-button > i {
+    padding: 0.4rem 0.5rem;
+}
+/*---------------------------------------------------------------------------------*/
+/*---FOLLOW US BUTTON SECTION------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+
+/* .artboard {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: row;
 	flex-wrap: wrap;
-	position: absolute;
-	left: 50%;
+	position: relative;
+    right: 0%;
+	top: 0%;
+    border-radius: 40px;
+} */
+
+    /* left: 50%;
 	top: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%); */
+.button {
+	width: 180px;
+	height: 45px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	position: relative;
+	
 	justify-content: space-evenly;
 	background: var(--color-05);
 	text-align: center;
@@ -326,12 +372,7 @@ p {
 	transition-timing-function: ease-in-out !important;
 	transition-delay: 1ms !important;
 }
-.button .links a:nth-child(5) {
-	transition-delay: 55ms;
-}
-.button .links a:nth-child(4) {
-	transition-delay: 110ms;
-}
+
 .button .links a:nth-child(3) {
 	transition-delay: 165ms;
 }
@@ -347,8 +388,8 @@ p {
 	justify-content: center;
 	flex-direction: row;
 	flex-wrap: wrap;
-	width: 200px;
-	height: 60px;
+	width: 180px;
+	height: 45px;
 	position: absolute;
 	top: 0em;
 	left: 0em;
@@ -370,11 +411,11 @@ p {
 	font-size: 20px;
 }
 .button:hover .links a {
-	transform: scale(1);
+	transform: scale(1.5);
 	opacity: 1;
 }
 .button:hover .overlay {
-	transform: translateX(-500px);
+	transform: translateX(-250px);
 }
 
 
@@ -950,18 +991,18 @@ footer {
 /*---MEDIA QUERY SECTION-----------------------------------------------------------*/
 /*---------------------------------------------------------------------------------*/
 
-@media only screen and (max-width: 799px) {
-    #header > video {
+/* @media only screen and (max-width: 799px) {
+    #hero-section > video {
         height: 100%;
     }
 
 }
 
 @media only screen and (min-width: 800px) {
-    #header > video {
+    #hero-section > video {
         width: 100%;
     }
-}
+} */
 
 @media only screen and (max-width: 960px) {
     .testimonial-button {
