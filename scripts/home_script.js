@@ -47,7 +47,7 @@ let productsCarousel = $('.products-carousel').owlCarousel({
     center: true,
     autoWidth: true,
     items: 2,
-    margin: 50,
+    margin: 150,
     loop: true,
     dots: false,
     /* responsive:{
@@ -94,7 +94,7 @@ let serviceCarousel = $('.services-carousel').owlCarousel({
     autoWidth: true,
     items:1,
     loop: true,
-    margin: 50,
+    margin: 300,
     doots: false,
     
 });
@@ -127,7 +127,7 @@ let testimonialCarousel = $('.testimonials-carousel').owlCarousel({
     autoWidth: true,
     items:1,
     loop: true,
-    margin: 50,
+    margin: 300,
     doots: false,
 });
 
