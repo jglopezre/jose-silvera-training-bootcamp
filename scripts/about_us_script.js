@@ -21,3 +21,4 @@ window.onscroll = function() {
         headerBottomBar.style.boxShadow = 'none';
     }
 }
+
